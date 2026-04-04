@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURELIUS | Command Center</title>
+    <style>
+        :root {
+            --gold: #d4af37;
+            --bg-dark: #050505;
+            --panel-bg: #111111;
+            --border: rgba(255, 255, 255, 0.08);
+            --text-dim: #888;
+            --transition: all 0.3s ease;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background-color: var(--bg-dark);
+            color: white;
+            height: 100vh;
+            overflow: hidden; /* Prevent body scroll */
+        }
+
+        /* --- DASHBOARD GRID LAYOUT --- */
+        .dashboard-container {
+            display: grid;
+            grid-template-columns: 260px 1fr;
+            grid-template-rows: 70px 1fr;
+            grid-template-areas: 
+                "sidebar header"
+                "sidebar main";
+            height: 100vh;
+        }
+
+        /* --- SIDEBAR --- */
+        aside {
+            grid-area: sidebar;
+            background: var(--panel-bg);
+            border-right: 1px solid var(--border);
+            padding: 2rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .brand { color: var(--gold); font-weight: bold; letter-spacing: 3px; font-size: 1.2rem; }
+
+        .nav-menu { list-style: none; }
+        .nav-item {
+            padding: 12px;
+            margin-bottom: 8px;
+            border-radius: 6px;
+            cursor: pointer;
+            color: var(--text-dim);
+            transition: var(--transition);
+        }
+        .nav-item.active, .nav-item:hover {
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--gold);
+        }
+
+        /* --- HEADER --- */
+        header {
+            grid-area: header;
+            background: rgba(17, 17, 17, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .search-bar {
+            background: #1a1a1a;
+            border: 1px solid var(--border);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 4px;
+            width: 300px;
+        }
+
+        /* --- MAIN CONTENT AREA --- */
+        main {
+            grid-area: main;
+            padding: 2rem;
+            overflow-y: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto auto 1fr;
+            gap: 1.5rem;
+        }
+
+        /* --- STAT CARDS --- */
+        .stat-card {
+            background: var(--panel-bg);
+            padding: 1.5rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+        }
+        .stat-card h4 { color: var(--text-dim); font-size: 0.8rem; text-transform: uppercase; margin-bottom: 10px; }
+        .stat-card .value { font-size: 1.8rem; font-weight: bold; color: var(--gold); }
+
+        /* --- DATA TABLE SECTION --- */
+        .table-container {
+            grid-column: span 4;
+            background: var(--panel-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        th { text-align: left; color: var(--text-dim); padding: 12px; border-bottom: 1px solid var(--border); font-size: 0.9rem; }
+        td { padding: 16px 12px; border-bottom: 1px solid var(--border); font-size: 0.9rem; }
+
+        .status {
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            background: rgba(255,255,255,0.05);
+        }
+
+        .status.paid { color: #2ecc71; background: rgba(46, 204, 113, 0.1); }
+
+        /* --- REVENUE CHART PLACEHOLDER (Grid Span) --- */
+        .chart-box {
+            grid-column: span 3;
+            background: url(revenue.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 300px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-dim);
+        }
+
+        .activity-feed {
+            grid-column: span 1;
+            background: var(--panel-bg);
+            border-radius: 8px;
+            padding: 1rem;
+            font-size: 0.85rem;
+        }
+
+        /* --- RESPONSIVENESS --- */
+        @media (max-width: 1024px) {
+            .dashboard-container { grid-template-columns: 80px 1fr; }
+            .nav-text, .brand { display: none; }
+            main { grid-template-columns: repeat(2, 1fr); }
+            .chart-box, .table-container { grid-column: span 2; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <aside role="navigation">
+            <div class="brand">AURELIUS</div>
+            <ul class="nav-menu">
+                <li class="nav-item active"><span class="nav-text">Dashboard</span></li>
+                <li class="nav-item"><span class="nav-text">Inventory</span></li>
+                <li class="nav-item"><span class="nav-text">Orders</span></li>
+                <li class="nav-item"><span class="nav-text">Customers</span></li>
+                <li class="nav-item"><span class="nav-text">Analytics</span></li>
+            </ul>
+        </aside>
+
+        <header>
+            <input type="text" class="search-bar" placeholder="Search orders or serial numbers...">
+            <div class="user-profile">
+                <span style="font-size: 0.8rem; margin-right: 10px;">Admin: M. Vahora</span>
+                <div style="width: 35px; height: 35px; background: var(--gold); border-radius: 50%; display: inline-block; vertical-align: middle;"></div>
+            </div>
+        </header>
+
+        <main id="main-content">
+            <section class="stat-card">
+                <h4>Total Revenue</h4>
+                <div class="value">$124,500</div>
+            </section>
+            <section class="stat-card">
+                <h4>Units Sold</h4>
+                <div class="value">412</div>
+            </section>
+            <section class="stat-card">
+                <h4>Active Bespoke Orders</h4>
+                <div class="value">18</div>
+            </section>
+            <section class="stat-card">
+                <h4>Avg. Order Value</h4>
+                <div class="value">$302</div>
+            </section>
+
+            <div class="chart-box">
+                <!-- [Revenue Projection Chart: Visualization Placeholder] -->
+            </div>
+            
+            <div class="activity-feed">
+                <h4 style="margin-bottom: 15px;">Recent Log</h4>
+                <p style="margin-bottom: 10px;">• New order: #8821</p>
+                <p style="margin-bottom: 10px;">• Stock low: Onyx Series</p>
+                <p>• Refund processed: #8790</p>
+            </div>
+
+            <section class="table-container">
+                <h3>Recent Transactions</h3>
+                <table aria-label="Recent customer orders">
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Customer</th>
+                            <th>Product</th>
+                            <th>Status</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#8821</td>
+                            <td>James Harrison</td>
+                            <td>The Obsidian Fountain</td>
+                            <td><span class="status paid">Paid</span></td>
+                            <td>$1,250.00</td>
+                        </tr>
+                        <tr>
+                            <td>#8820</td>
+                            <td>Elena Rodriguez</td>
+                            <td>Silver Rollerball</td>
+                            <td><span class="status paid">Paid</span></td>
+                            <td>$890.00</td>
+                        </tr>
+                        <tr>
+                            <td>#8819</td>
+                            <td>Sarah Chen</td>
+                            <td>Architect's Pen (Titanium)</td>
+                            <td><span class="status">Processing</span></td>
+                            <td>$745.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>

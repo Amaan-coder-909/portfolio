@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURELIUS | Fine Writing Instruments</title>
+    <style>
+        /* --- DESIGN TOKENS (Variables) --- */
+        :root {
+            --gold: #d4af37;
+            --gold-hover: #f1c40f;
+            --dark: #0a0a0a;
+            --card-bg: #151515;
+            --text-main: #e0e0e0;
+            --text-muted: #a0a0a0;
+            --nav-height: 80px;
+            --transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* --- GLOBAL RESET --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: var(--dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* --- ACCESSIBILITY UTILITIES --- */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--gold);
+            color: var(--dark);
+            padding: 8px;
+            z-index: 1001;
+            transition: top 0.3s;
+        }
+        .skip-link:focus { top: 0; }
+
+        /* --- TYPOGRAPHY --- */
+        h1, h2, h3 {
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        /* --- NAVIGATION --- */
+        header {
+            height: var(--nav-height);
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+        }
+
+        nav {
+            width: 90%;
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            color: var(--gold);
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover { color: var(--gold); }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: radial-gradient(circle at center, #1a1a1a 0%, #000 100%);
+            padding: 0 20px;
+        }
+
+        .hero-inner {
+            max-width: 800px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeIn 1.5s forwards 0.5s;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            font-style: italic;
+        }
+
+        /* --- BUTTONS --- */
+        .btn {
+            padding: 15px 35px;
+            border: 1px solid var(--gold);
+            background: transparent;
+            color: var(--gold);
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: var(--transition);
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background: var(--gold);
+            color: var(--dark);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+        }
+
+        /* --- PRODUCT GRID --- */
+        .section {
+            padding: 120px 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .card:hover {
+            border-color: var(--gold);
+            transform: translateY(-10px);
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            margin-bottom: 25px;
+        }
+
+        .card .price {
+            display: block;
+            font-size: 1.2rem;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            padding: 60px 5%;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            text-align: center;
+        }
+
+        .footer-text {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+
+        /* --- RESPONSIVE ADJUSTMENTS --- */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .section { padding: 80px 20px; }
+            .hero h1 { font-size: 2.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header role="banner">
+        <nav aria-label="Primary Navigation">
+            <a href="#" class="logo">AURELIUS</a>
+            <ul class="nav-links">
+                <li><a href="#collections">Collections</a></li>
+                <li><a href="#craft">Craftmanship</a></li>
+                <li><a href="#bespoke">Bespoke</a></li>
+            </ul>
+            <a href="#cart" class="btn" style="padding: 10px 20px; font-size: 0.7rem;">Cart (0)</a>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="hero">
+            <div class="hero-inner">
+                <h1>Precision in Every Stroke</h1>
+                <p>An instrument for those who draft the blueprints of tomorrow.</p>
+                <a href="#collections" class="btn">View the Collection</a>
+            </div>
+        </section>
+
+        <section id="collections" class="section">
+            <div style="text-align: center;">
+                <h2>The 2026 Series</h2>
+                <div style="width: 50px; height: 1px; background: var(--gold); margin: 20px auto;"></div>
+            </div>
+
+            <div class="grid">
+                <article class="card">
+                    <h3>The Midnight Fountain</h3>
+                    <p>Matte obsidian barrel with a handcrafted 18-karat solid gold nib.</p>
+                    <span class="price">$1,250.00</span>
+                    <a href="#" class="btn" style="padding: 10px 20px; font-size: 0.8rem;">Add to Collection</a>
+                </article>
+
+                <article class="card">
+                    <h3>The Silver Rollerball</h3>
+                    <p>Sterling silver casing featuring a custom aerodynamic ink-flow system.</p>
+                    <span class="price">$890.00</span>
+                    <a href="#" class="btn" style="padding: 10px 20px; font-size: 0.8rem;">Add to Collection</a>
+                </article>
+
+                <article class="card">
+                    <h3>The Artist’s Sketch</h3>
+                    <p>Weighted titanium body designed for perfect ergonomic balance during long sessions.</p>
+                    <span class="price">$745.00</span>
+                    <a href="#" class="btn" style="padding: 10px 20px; font-size: 0.8rem;">Add to Collection</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <p class="footer-text">© 2026 AURELIUS FINE INSTRUMENTS. ESTABLISHED IN LONDON.</p>
+    </footer>
+
+</body>
+</html>
