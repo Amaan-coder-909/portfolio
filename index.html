@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mohammad Amaan Ranchadiya | Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- preloader -->
+  <div id="preloader">
+    <div class="preloader-text-wrapper">
+      <h1 id="loader-text"></h1>
+    </div>
+  </div>
+
+  <section class="hero-section">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <div class="hero-card">
+      <p class="hero-greeting">Hi, my name is</p>
+      <h1 class="hero-name">Mohammad Amaan Ranchadiya</h1>
+
+      <div class="typing-container">
+        I'm a <span id="typing-text"></span><span class="cursor">&nbsp;</span>
+      </div>
+
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-secondary">Let's Talk</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-section" id="about">
+    <div class="about-container">
+      <div class="section-title-container">
+        <h2 class="section-title">About Me</h2>
+        <div class="title-line"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-card description-card">
+          <p class="about-text">
+            Passionate frontend developer focused on creating modern, responsive, and interactive websites using HTML,
+            CSS, JavaScript, and React.
+          </p>
+          <p class="about-text-sub">
+            I turn complex layout problems into beautiful, smooth user interfaces. By blending clean semantic code with
+            interactive visual aesthetics, I build digital spaces that feel intuitive and perform flawlessly on any
+            device.
+          </p>
+        </div>
+        <div class="stats-grid">
+          <div class="about-card stat-card">
+            <h3 class="stat-number">50+</h3>
+            <p class="stat-label">Projects Completed</p>
+          </div>
+          <div class="about-card stat-card">
+            <h3 class="stat-number">5+</h3>
+            <p class="stat-label">Technologies Learned</p>
+          </div>
+          <div class="about-card stat-card">
+            <h3 class="stat-number">3,200+</h3>
+            <p class="stat-label">Hours Coding</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="skills-section" id="skills">
+    <div class="skills-container">
+      <div class="section-title-container">
+        <h2 class="section-title">Technical Mastery</h2>
+        <div class="title-line"></div>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-header">
+            <span class="skill-name">HTML5</span>
+            <span class="skill-percentage">95%</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-bar" style="width: 95%;"></div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-header">
+            <span class="skill-name">CSS3</span>
+            <span class="skill-percentage">90%</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-bar" style="width: 90%;"></div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-header">
+            <span class="skill-name">JavaScript</span>
+            <span class="skill-percentage">88%</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-bar" style="width: 88%;"></div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-header">
+            <span class="skill-name">React.js</span>
+            <span class="skill-percentage">85%</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-bar" style="width: 85%;"></div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-header">
+            <span class="skill-name">Responsive Design</span>
+            <span class="skill-percentage">92%</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-bar" style="width: 92%;"></div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-header">
+            <span class="skill-name">GitHub</span>
+            <span class="skill-percentage">80%</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-bar" style="width: 80%;"></div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-header">
+            <span class="skill-name">UI/UX Basics</span>
+            <span class="skill-percentage">78%</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-bar" style="width: 78%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects-section" id="projects">
+    <div class="projects-container">
+      <div class="section-title-container">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="title-line"></div>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-media-placeholder">
+            <div class="media-overlay-icon">⛏</div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Brick Breaker Game</h3>
+            <p class="project-description">An arcade-style retro brick breaker game featuring collision physics,
+              real-time score tracking, and scalable difficulty modifiers.</p>
+            <div class="project-tech-stack">
+              <span class="tech-tag">HTML5 Canvas</span>
+              <span class="tech-tag">JavaScript</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://brick-breaker-two-silk.vercel.app/" class="project-btn btn-live">Live Demo</a>
+              <a href="https://github.com/Amaan-coder-909/brick-breaker" class="project-btn btn-git">GitHub</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-media-placeholder">
+            <div class="media-overlay-icon">⚡</div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">CRUD Operation</h3>
+            <p class="project-description">A responsive CRUD application built to manage, create, update, and delete data efficiently with a clean and user-friendly interface.</p>
+            <div class="project-tech-stack">
+              <span class="tech-tag">HTML5</span>
+              <span class="tech-tag">Advanced CSS</span>
+              <span class="tech-tag">Advanced JS</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://crudop-six.vercel.app/" class="project-btn btn-live">Live Demo</a>
+              <a href="https://github.com/Amaan-coder-909/CRUD-operation-using-JS" class="project-btn btn-git">GitHub</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-media-placeholder">
+            <div class="media-overlay-icon">🥗</div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Nutrition Calculator</h3>
+            <p class="project-description">A precise health metrics utility that evaluates caloric guidelines, metabolic
+              ratios, and macro breakdowns with clean interface structures.</p>
+            <div class="project-tech-stack">
+              <span class="tech-tag">React.js</span>
+              <span class="tech-tag">State Management</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://nutrition-calculator-a7guuoljj-amaan909s-projects-0c8ab479.vercel.app/" class="project-btn btn-live">Live Demo</a>
+              <a href="https://github.com/Amaan-coder-909/Nutrition-Calculator" class="project-btn btn-git">GitHub</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-media-placeholder">
+            <div class="media-overlay-icon">💼</div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">E-Commerce Website</h3>
+            <p class="project-description">Designed and developed a modern fashion eCommerce website focused on seamless shopping, elegant UI, and responsive user experience.
+The project showcases product browsing, stylish layouts, and a clean interface tailored for contemporary fashion brands.</p>
+            <div class="project-tech-stack">
+              <span class="tech-tag">HTML5</span>
+              <span class="tech-tag">CSS Variables</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://amf-ba597bnwd-amaan909s-projects-0c8ab479.vercel.app/" class="project-btn btn-live">Live Demo</a>
+              <a href="https://github.com/Amaan-coder-909/amf.com" class="project-btn btn-git">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="playground-section" id="playground">
+    <div class="playground-container">
+      <div class="section-title-container">
+        <h2 class="section-title">Play With My Skills</h2>
+        <div class="title-line"></div>
+      </div>
+      <div class="playground-grid">
+        <div class="playground-card console-panel">
+          <h3 class="panel-title">Engine Configuration</h3>
+          <p class="panel-subtitle">Manipulate global DOM elements and CSS variables in real time.</p>
+          <div class="control-group">
+            <label class="control-label">Accent Spectrum Shift</label>
+            <div class="color-swatch-grid">
+              <button class="swatch active-swatch" data-accent="#F59E0B" data-hover="#D97706"
+                style="background: #F59E0B;"></button>
+              <button class="swatch" data-accent="#10B981" data-hover="#059669" style="background: #10B981;"></button>
+              <button class="swatch" data-accent="#6366F1" data-hover="#4F46E5" style="background: #6366F1;"></button>
+              <button class="swatch" data-accent="#EF4444" data-hover="#DC2626" style="background: #EF4444;"></button>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">Global UI Physics</label>
+            <button class="toggle-btn state-active" id="anim-toggle">
+              <span class="indicator-dot"></span>
+              <span class="btn-text-state">Motion Engine: Online</span>
+            </button>
+          </div>
+        </div>
+        <div class="playground-card visualizer-panel">
+          <h3 class="panel-title">CSS Real-Time Renderer</h3>
+          <div class="visualizer-stage">
+            <div class="interactive-element" id="fx-box"><span id="fx-text">CSS3</span></div>
+          </div>
+          <div class="effect-controls">
+            <button class="fx-btn" data-fx="blur-fx">Backdrop Blur</button>
+            <button class="fx-btn" data-fx="glow-fx">Neon Glow</button>
+            <button class="fx-btn" data-fx="rotate-fx">3D Matrix</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="timeline-section" id="journey">
+    <div class="timeline-container">
+      <div class="section-title-container">
+        <h2 class="section-title">My Learning Journey</h2>
+        <div class="title-line"></div>
+      </div>
+      <div class="timeline-track-wrapper">
+        <div class="timeline-progress-line"></div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content-card">
+            <span class="timeline-date">The Foundation</span>
+            <h3 class="timeline-node-title">Started HTML & CSS</h3>
+            <p class="timeline-node-desc">Mastered semantic document layouts, responsive fluid properties, and modern
+              Flexbox layouts.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content-card">
+            <span class="timeline-date">Adding Logic</span>
+            <h3 class="timeline-node-title">Learned JavaScript</h3>
+            <p class="timeline-node-desc">Unlocked native programmability, DOM mutations, asynchronous loops, and
+              modular data flows.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content-card">
+            <span class="timeline-date">Application Phase</span>
+            <h3 class="timeline-node-title">Built Interactive Projects</h3>
+            <p class="timeline-node-desc">Engineered modular game structures and visual design testing sandboxes.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content-card">
+            <span class="timeline-date">Scaling Architecture</span>
+            <h3 class="timeline-node-title">Learning React</h3>
+            <p class="timeline-node-desc">Mastering virtual rendering cycles, component state layouts, hooks, and
+              scalable clean architectures.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content-card">
+            <span class="timeline-date">Current Horizon</span>
+            <h3 class="timeline-node-title">Building Advanced UI Experiences</h3>
+            <p class="timeline-node-desc">Crafting state-driven controls and fluid micro-interactions to deliver total
+              user engagement.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials-section" id="endorsements">
+    <div class="testimonials-container">
+      <div class="section-title-container">
+        <h2 class="section-title">Core Professional Pillars</h2>
+        <div class="title-line"></div>
+        <p class="section-subtitle">How peers, mentors, and collaborators describe my approach to software engineering.
+        </p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="card-quote-icon">“</div>
+          <div class="rating-stars">★★★★★</div>
+          <h3 class="pillar-title">Passionate Learner</h3>
+          <p class="pillar-quote">Deeply committed to mastering core fundamentals. Treats every technical challenge as a
+            chance to build deep domain expertise.</p>
+          <div class="reviewer-meta">
+            <div class="reviewer-avatar">PL</div>
+            <div class="reviewer-info"><span class="reviewer-role">Technical Mindset</span><span
+                class="reviewer-tag">Continuous Growth</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="card-quote-icon">“</div>
+          <div class="rating-stars">★★★★★</div>
+          <h3 class="pillar-title">Creative Problem Solver</h3>
+          <p class="pillar-quote">Brings a distinct creative edge to spatial engineering. Designs elegant, fluid systems
+            that blend technical logic beautifully.</p>
+          <div class="reviewer-meta">
+            <div class="reviewer-avatar">CS</div>
+            <div class="reviewer-info"><span class="reviewer-role">Execution Style</span><span
+                class="reviewer-tag">Elegant Systems</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="card-quote-icon">“</div>
+          <div class="rating-stars">★★★★★</div>
+          <h3 class="pillar-title">Fast Adapting Developer</h3>
+          <p class="pillar-quote">Thrives when jumping into unfamiliar tech stacks. His rapid implementation cycle means
+            he can synthesize new features smoothly.</p>
+          <div class="reviewer-meta">
+            <div class="reviewer-avatar">FA</div>
+            <div class="reviewer-info"><span class="reviewer-role">Workflow Agility</span><span
+                class="reviewer-tag">Rapid Implementation</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-section" id="contact">
+    <div class="contact-container">
+      <div class="section-title-container">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="title-line"></div>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info-panel">
+          <h3 class="panel-heading">Let's Connect</h3>
+          <p class="panel-desc">I am always open to discussing open-source environments, functional web development, or
+            engineering opportunities.</p>
+          <div class="connection-channels">
+            <a href="mailto:ranchadiyaa@gmail.com" class="channel-card">
+              <div class="channel-icon-box">✉</div>
+              <div class="channel-details"><span class="channel-label">Email Me</span><span
+                  class="channel-value">ranchadiyaa@gmail.com</span></div>
+            </a>
+            <a href="https://github.com/Amaan-coder-909" class="channel-card">
+              <div class="channel-icon-box">🐙</div>
+              <div class="channel-details"><span class="channel-label">GitHub Profiles</span><span
+                  class="channel-value">github.com/Amaan-coder-909</span></div>
+            </a>
+            <div class="channel-card card-disabled">
+              <div class="channel-icon-box">💼</div>
+              <div class="channel-details"><span class="channel-label">LinkedIn</span><span class="channel-value">Coming
+                  Soon</span></div>
+            </div>
+          </div>
+          <a href="https://wa.me/919687991236?text=Hello%20Amaan%2C%20I%20want%20to%20connect!" class="whatsapp-btn">Message via WhatsApp</a>
+        </div>
+        <div class="contact-form-panel">
+          <form class="glowing-contact-form" autocomplete="off">
+            <div class="input-group">
+              <input type="text" id="user-name" required placeholder=" " class="glow-field" />
+              <label for="user-name" class="floating-label">Your Name</label>
+            </div>
+            <div class="input-group">
+              <input type="email" id="user-email" required placeholder=" " class="glow-field" />
+              <label for="user-email" class="floating-label">Email Address</label>
+            </div>
+            <div class="input-group">
+              <textarea id="user-message" rows="5" required placeholder=" " class="glow-field"></textarea>
+              <label for="user-message" class="floating-label">Your Message</label>
+            </div>
+            <button type="submit" class="form-submit-btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="portfolio-footer">
+    <div class="footer-divider"></div>
+    <div class="footer-content">
+      <p class="footer-copyright">&copy; 2026 Portfolio. All Rights Reserved.</p>
+      <p class="footer-tagline">Built with speed and architectural focus.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
