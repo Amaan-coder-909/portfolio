@@ -1142,11 +1142,6 @@ body.no-animations * {
   text-overflow: ellipsis; /* Smart clipping for small displays */
 }
 
-.card-disabled {
-  opacity: 0.4;
-  cursor: not-allowed;
-}
-
 .whatsapp-btn {
   display: inline-flex;
   align-items: center;
